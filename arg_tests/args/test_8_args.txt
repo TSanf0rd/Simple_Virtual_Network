@@ -1,0 +1,1 @@
+arg_tests/files/test_8_input.txt arg_tests/outputs/test_8_output.txt
