@@ -1,3 +1,0 @@
-[submodule "linux_config"]
-	path = linux_config
-	url = https://git.mst.edu/os/linux_config.git

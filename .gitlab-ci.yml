@@ -1,4 +1,7 @@
-image: "git-docker-classes.mst.edu/containers/container"
+image: "git-docker.mst.edu/os/container"
+
+variables:
+  IS_PIPELINE: 1
 
 generaltester:
   script:

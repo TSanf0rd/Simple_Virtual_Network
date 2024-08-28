@@ -6,7 +6,7 @@
 # In Python, this is whichever file you run via python3 whatever.py
 # In Bash, this is whichever file you run via bash whatever.sh
 # In Rust, this is src/main.rs
-main_file="factor.py"
+main_file="src/factor.py"
 
 # Any arguments you want passed to the main driver, upon excution.
 # If you do not have any arguments, just leave as an empty string, ""
@@ -56,8 +56,8 @@ student_file="results.txt"
 # $ file file.whatever
 declare -A file_arr
 file_arr=(
-    ["captured_packets.pcapng"]="pcapng capture file"
-    ["report.md"]="ASCII text"
+    ["uploads/captured_packets.pcapng"]="pcapng capture file"
+    ["uploads/report.md"]="ASCII text"
 )
 ######## <- File and type existence tests ########
 

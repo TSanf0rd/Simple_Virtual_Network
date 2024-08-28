@@ -1,5 +1,3 @@
-* [ ] TODO delete general autograding stuff, pulling anything good to git_autograding.md
-
 "Think Global, Code Local"
     - Me
 
@@ -171,9 +169,10 @@ Test the ssh server by ssh'ing from one guest (client) to the other guest machin
 3. Wireshark
 On the client, launch Wireshark as root: `sudo wireshark` and start capturing!
 What does the SSH traffic look like through Wireshark?
-Capture the traffic, saving it as the default (pcapng) format, named `captured_packets.pcapng`
+Capture the traffic, saving it as the default (pcapng) format, 
+named `captured_packets.pcapng` in the `uploads/` directory.
 
-4. Write a report, `report.md`:
+4. Write a report, `report.md` saved in the `uploads/` directory:
 Which VirtualBox networking mode did you use? Why? Justify the logic.
 What did you do with the MAC addresses of the VMs when you cloned? Why?
 Include a screenshot of each of your VMs' network settings (virtualbox and internal).
@@ -183,3 +182,7 @@ Actually embed these screenshots in the markdown document:
 How did you install and configure your ssh server?
 What does each sub-step of installation and configuration do?
 Include screenshots of successfully sshing from one machine to the other.
+
+## Git autograding 
+Git clone your repository onto your machine, and run the autograder.
+See: [docs/git_autograding.md](docs/git_autograding.md)
