@@ -37,21 +37,42 @@ def factor(num: int) -> list[int]:
     >>> print("Unlike other frameworks, doctest does stdout easily")
     Unlike other frameworks, doctest does stdout easily
     """
-    # To debug doctest test in pudb
-    # Highlight the line of code below below
-    # Type 't' to jump 'to' it
-    # Type 's' to 'step' deeper
-    # Type 'n' to 'next' over
-    # Type 'f' or 'r' to finish/return a function call and go back to caller
-    return "delete this and write your own code"
+    return [i for i in range(1, num + 1) if num % i == 0]
 
 
-if __name__ == '__main__':
+def main() -> None:
+    # Main driver function
+    if len(sys.argv) == 3:
+        # Argument-based input: reading integer from input file and writing to output file
+        try:
+            # Read the integer from the input file
+            with open(sys.argv[1], "r") as input_file:
+                num = int(input_file.read().strip())
+
+            # Write the factors to the output file
+            with open(sys.argv[2], "w") as output_file:
+                factors = factor(num)
+                output_file.write(str(factors))
+
+            print(f"Factors of {num} written to {sys.argv[2]}")
+        except ValueError:
+            print("Please provide a valid integer in the input file.")
+        except FileNotFoundError:
+            print("Input or output file not found.")
+    else:
+        # Standard input/output
+        try:
+            num = int(input("Enter an integer to factor: "))
+            print(f"Factors of {num}: {factor(num)}")
+        except ValueError:
+            print("Invalid input! Please enter a valid integer.")
+
+
+if __name__ == "__main__":
     # Execute doctests to protect main:
     import doctest
 
     doctest.testmod()
 
     # Run main:
-    pass
-    # YOUR CODE GOES HERE
+    main()
